@@ -1,10 +1,10 @@
 
 const p1 = new Promise((resolve, reject)=>{
-    setTimeout(()=>resolve("p1 success"),3000)
+    setTimeout(()=>reject("p1 success"),3000)
 });
 
 const p2 = new Promise((resolve, reject)=>{
-    setTimeout(()=>resolve("p2 success"),5000)
+    setTimeout(()=>reject("p2 success"),5000)
     // setTimeout(()=>reject("p2 failed"),1000)
 });
 
@@ -19,4 +19,5 @@ Promise.any([p1,p2,p3])
 })
 .catch((err)=>{
     console.error(err);
+    console.log(err.errors)
 }); 
