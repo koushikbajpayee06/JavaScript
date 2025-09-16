@@ -2,12 +2,12 @@
 const p1 = new Promise((resolve, reject)=>{
     setTimeout(()=>{
         resolve("Promise Resolved Value!!");
-    },10000)
+    },5000)
 });
 const p2 = new Promise((resolve, reject)=>{
     setTimeout(()=>{
         resolve("Promise Resolved Value!!");
-    },5000)
+    },10000)
 });
 
 async function handlePromise(){
