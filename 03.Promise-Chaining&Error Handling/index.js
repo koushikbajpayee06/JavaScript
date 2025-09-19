@@ -1,11 +1,12 @@
 const cart = ["shoe","pants","kurta"];
 
 const promise = createOrder(cart);
-console.log(promise);
+
 
 promise.then(function(orderId){
     console.log(orderId)
-});
+})
+
 
 /// Producer
 function createOrder(cart){
@@ -29,5 +30,5 @@ function createOrder(cart){
 }
 
 function validateCard(cart){
-    return true;
+    return false;
 }
