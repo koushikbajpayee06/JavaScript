@@ -6,7 +6,9 @@ const promise = createOrder(cart);
 promise.then(function(orderId){
     console.log(orderId)
 })
-
+.catch(function(err){
+    console.log(err.message);
+});
 
 /// Producer
 function createOrder(cart){
@@ -15,7 +17,7 @@ function createOrder(cart){
         // ValidateCart
         // orderId
         if(!validateCard(cart)){
-            const err = new Error("cart is not Valid");
+            const err = new Error("Cart is not Valid");
             reject(err);
         }
         //logic for crreateOrder
