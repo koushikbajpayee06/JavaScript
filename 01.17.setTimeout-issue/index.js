@@ -1,8 +1,11 @@
 console.log('start');
 
-setTimeout(function cb(){
-    console.log("Callback")
-},0);
+function cb(){
+    console.log(" cb")
+};
+cb();
+
+setTimeout(cb(),0);
 
 console.log("End");
 
