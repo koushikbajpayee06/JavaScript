@@ -7,6 +7,6 @@ const users =[
 
 const output = users.filter((x)=>x.age<30).reduce((acc,curr)=>{
     acc.push(curr.firstName+" "+ curr.lastName);
-    return acc
+    return acc;
 },[])
 console.log(output)
