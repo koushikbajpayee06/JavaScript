@@ -1,10 +1,14 @@
-const API_URL = "https://api.github.com/users/akshaymarch7";
+const API_URL = "https://sdghfhj";
 
 
 async function handlePromise(){
-   const data =  await fetch(API_URL);
-   const json = await data.json()
-   console.log(json);
+    try{
+        const data =  await fetch(API_URL);
+        const json = await data.json()
+        console.log(json);
+    }catch(err){
+        console.log(err);
+    }
 
 //    fetch().then(res=>res.json()).then(res=>console.log(res))
 }
