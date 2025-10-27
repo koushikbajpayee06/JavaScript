@@ -18,7 +18,10 @@ promise.then(function(orderId){
 })
 .catch(function(err){
     console.log(err.message);
-});
+})
+.then(function(orderId){
+    console.log("No matter what happenes, I will definately be called");
+})
 
 /// Producer part of createOrder
 // promise constructor taked a function having two parameter resolve and reject which are given by js to build promise
@@ -50,5 +53,5 @@ function proceedToPayment(orderId){
     });
 }
 function validateCard(cart){
-    return true;
+    return false;
 }
