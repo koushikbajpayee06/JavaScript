@@ -1,8 +1,10 @@
 const cart = ["shoe","pants","kurta"];
 
+// create order is an async operation returns us a promise
+
 const promise = createOrder(cart);
 
-
+//attaching a cb to proceedToPayment that 
 promise.then(function(orderId){
     console.log(orderId)
 })
@@ -10,17 +12,20 @@ promise.then(function(orderId){
     console.log(err.message);
 });
 
-/// Producer
+/// Producer part of createOrder
+// promise constructor taked a function having two parameter resolve and reject which are given by js to build promise
+
 function createOrder(cart){
     const pr = new Promise(function(resolve, reject){
         // CreateOrder
         // ValidateCart
         // orderId
         if(!validateCard(cart)){
+            // create error inside js
             const err = new Error("Cart is not Valid");
             reject(err);
         }
-        //logic for crreateOrder
+        //logic for createOrder on success return orderId
         const orderId = "12345";
         if(orderId){
             setTimeout(function(){
@@ -32,5 +37,5 @@ function createOrder(cart){
 }
 
 function validateCard(cart){
-    return false;
+    return true;
 }
